@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site.name }} — {{ site.tagline }}</title>
+<meta name="description" content="{{ site.subtitle }}">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-ring"></div>
+  <div class="preloader-text">IRON<span>VEIN</span></div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ NAV ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">IRON<span>VEIN</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#packages">Packages</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#packages" class="btn btn-gold nav-cta">Join Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow glow-red"></div>
+  <div class="hero-glow glow-gold"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal-up">{{ site.subtitle }}</p>
+    <h1 class="hero-title">
+      <span class="line" data-line="1">FORGE YOUR</span>
+      <span class="line gold-text" data-line="2">LEGEND</span>
+    </h1>
+    <p class="hero-desc reveal-up delay-3">
+      Black steel. Gold discipline. A members-only training ground built for people
+      who refuse average — premium equipment, elite coaching, zero compromises.
+    </p>
+    <div class="hero-actions reveal-up delay-4">
+      <a href="#packages" class="btn btn-gold btn-lg">
+        <span>View Packages</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#experience" class="btn btn-outline btn-lg">
+        <i class="fa-solid fa-play"></i>
+        <span>Watch The Gym</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    {% for s in stats %}
+    <div class="stat-item">
+      <div class="stat-number" data-count="{{ s.value }}" data-suffix="{{ s.suffix }}">0</div>
+      <div class="stat-label">{{ s.label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="scroll-indicator">
+    <span></span>
+    <p>SCROLL</p>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>STRENGTH <i class="fa-solid fa-fire"></i></span>
+    <span>DISCIPLINE <i class="fa-solid fa-fire"></i></span>
+    <span>POWER <i class="fa-solid fa-fire"></i></span>
+    <span>LEGACY <i class="fa-solid fa-fire"></i></span>
+    <span>STRENGTH <i class="fa-solid fa-fire"></i></span>
+    <span>DISCIPLINE <i class="fa-solid fa-fire"></i></span>
+    <span>POWER <i class="fa-solid fa-fire"></i></span>
+    <span>LEGACY <i class="fa-solid fa-fire"></i></span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal-left">
+      <div class="about-frame">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop" alt="Athlete training at IRONVEIN" loading="lazy">
+        <div class="frame-border"></div>
+      </div>
+      <div class="badge-float">
+        <i class="fa-solid fa-trophy"></i>
+        <div>
+          <strong>12+ Years</strong>
+          <span>Of Elite Training</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-copy reveal-right">
+      <p class="section-eyebrow">01 — About Ironvein</p>
+      <h2 class="section-title">Not a gym. <span class="gold-text">A proving ground.</span></h2>
+      <p class="section-text">
+        IRONVEIN was built for the 1% who train with intent. Every rig, every plate,
+        every square foot of this space was chosen to remove excuses — so the only
+        thing standing between you and your best body is the work itself.
+      </p>
+      <p class="section-text">
+        From competition powerlifting platforms to a dedicated recovery suite, this
+        is where serious athletes and first-time lifters train side by side, under
+        coaches who've done it themselves.
+      </p>
+
+      <div class="about-points">
+        <div class="point"><i class="fa-solid fa-circle-check"></i> Certified strength & conditioning coaches</div>
+        <div class="point"><i class="fa-solid fa-circle-check"></i> Imported premium equipment</div>
+        <div class="point"><i class="fa-solid fa-circle-check"></i> Personalized training programs</div>
+      </div>
+
+      <a href="#contact" class="btn btn-gold">Start Your Journey</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-head center">
+      <p class="section-eyebrow">02 — What You Get</p>
+      <h2 class="section-title">Built for <span class="gold-text">peak performance</span></h2>
+      <p class="section-text">Every corner of IRONVEIN is engineered around one goal — your progress.</p>
+    </div>
+
+    <div class="features-grid">
+      {% for f in features %}
+      <div class="feature-card reveal-up" style="transition-delay: {{ loop.index0 * 0.08 }}s">
+        <div class="feature-icon"><i class="fa-solid fa-{{ f.icon }}"></i></div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+        <div class="feature-shine"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head center">
+      <p class="section-eyebrow">03 — Membership</p>
+      <h2 class="section-title">Choose your <span class="gold-text">tier of discipline</span></h2>
+      <p class="section-text">Simple pricing. No hidden fees. Cancel anytime.</p>
+    </div>
+
+    <div class="packages-grid">
+      {% for p in packages %}
+      <div class="package-card reveal-up {{ 'featured' if p.featured }}" style="transition-delay: {{ loop.index0 * 0.1 }}s">
+        {% if p.featured %}<div class="ribbon">Most Popular</div>{% endif %}
+        <p class="package-tier">{{ p.tier }}</p>
+        <h3 class="package-name">{{ p.name }}</h3>
+        <div class="package-price">
+          <span class="currency">₹</span><span class="amount">{{ "{:,}".format(p.price) }}</span><span class="period">/{{ p.period }}</span>
+        </div>
+        <ul class="package-perks">
+          {% for perk in p.perks %}
+          <li><i class="fa-solid fa-check"></i> {{ perk }}</li>
+          {% endfor %}
+        </ul>
+        <a href="https://wa.me/{{ site.whatsapp_number }}?text={{ ('I want to join the ' + p.name + ' plan (₹' + '{:,}'.format(p.price) + '/' + p.period + ').') | urlencode }}"
+           target="_blank" rel="noopener" class="btn {{ 'btn-gold' if p.featured else 'btn-outline' }} btn-block">
+          Choose {{ p.name }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE / VIDEO ============ -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-head center">
+      <p class="section-eyebrow">04 — Inside The Gym</p>
+      <h2 class="section-title">Step onto the <span class="gold-text">floor</span></h2>
+      <p class="section-text">A first-hand look at the space, the equipment and the energy.</p>
+    </div>
+
+    <div class="video-wrap reveal-up">
+      <!--
+        Replace the poster image and <source> below with your own gym walkthrough video.
+        Drop your file at: static/videos/gym-tour.mp4
+      -->
+      <video id="gymVideo" poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop" muted loop playsinline preload="none">
+        <source src="{{ url_for('static', filename='videos/gym-tour.mp4') }}" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+      <button class="video-play" id="videoPlayBtn" aria-label="Play video">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <div class="video-caption">
+        <span>01:24</span> — Full facility walkthrough
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head center">
+      <p class="section-eyebrow">05 — Member Voices</p>
+      <h2 class="section-title">Results that <span class="gold-text">speak</span></h2>
+    </div>
+
+    <div class="testimonial-track">
+      {% for t in testimonials %}
+      <div class="testimonial-card reveal-up" style="transition-delay: {{ loop.index0 * 0.1 }}s">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <p class="testimonial-quote">{{ t.quote }}</p>
+        <div class="testimonial-author">
+          <div class="avatar">{{ t.name[0] }}</div>
+          <div>
+            <strong>{{ t.name }}</strong>
+            <span>{{ t.role }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal-left">
+      <p class="section-eyebrow">06 — Get In Touch</p>
+      <h2 class="section-title">Ready to <span class="gold-text">begin?</span></h2>
+      <p class="section-text">Walk in for a free tour and fitness assessment — or reach us directly below.</p>
+
+      <div class="info-list">
+        <a class="info-item" href="tel:{{ site.phone_display | replace(' ', '') }}">
+          <i class="fa-solid fa-phone"></i>
+          <div><strong>Call Us</strong><span>{{ site.phone_display }}</span></div>
+        </a>
+        <a class="info-item" href="mailto:{{ site.email }}">
+          <i class="fa-solid fa-envelope"></i>
+          <div><strong>Email</strong><span>{{ site.email }}</span></div>
+        </a>
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><strong>Visit Us</strong><span>{{ site.address }}</span></div>
+        </div>
+      </div>
+
+      <div class="hours-card">
+        <h4><i class="fa-solid fa-clock"></i> Opening Hours</h4>
+        {% for h in site.hours %}
+        <div class="hours-row"><span>{{ h.days }}</span><span>{{ h.time }}</span></div>
+        {% endfor %}
+      </div>
+
+      <div class="social-row">
+        <a href="{{ site.instagram }}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+        <a href="{{ site.facebook }}" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="{{ site.youtube }}" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/{{ site.whatsapp_number }}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form reveal-right" action="{{ url_for('contact') }}" method="POST">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="form-flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="+91 00000 00000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Fitness Goal</label>
+          <select name="goal">
+            <option value="Weight Loss">Weight Loss</option>
+            <option value="Muscle Gain">Muscle Gain</option>
+            <option value="Strength & Power">Strength & Power</option>
+            <option value="General Fitness">General Fitness</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="Tell us about your goals..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold btn-lg btn-block">
+        <span>Send Message</span><i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CTA STRIP ============ -->
+<section class="cta-strip">
+  <div class="container cta-inner">
+    <h2>First workout is <span class="gold-text">on us.</span></h2>
+    <a href="https://wa.me/{{ site.whatsapp_number }}?text={{ whatsapp_msg | urlencode }}" target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+      <i class="fa-brands fa-whatsapp"></i><span>Message Us Now</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="logo">IRON<span>VEIN</span></a>
+      <p>Black steel. Gold discipline. A private training ground for people who refuse average.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:{{ site.phone_display | replace(' ', '') }}">{{ site.phone_display }}</a>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <span>{{ site.address }}</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ year }} {{ site.name }}. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+<a href="https://wa.me/{{ site.whatsapp_number }}?text={{ whatsapp_msg | urlencode }}"
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="wa-pulse"></span>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
