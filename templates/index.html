@@ -109,7 +109,8 @@
   <div class="container about-grid">
     <div class="about-visual reveal-left">
       <div class="about-frame">
-        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop" alt="Athlete training at {{ site.name }}" loading="lazy">
+                <img src="{{ url_for('static', filename='images/gympic.jpg') }}"
+             alt="Athlete training at {{ site.name }}" loading="lazy">
         <div class="frame-border"></div>
       </div>
       <div class="badge-float">
