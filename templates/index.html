@@ -109,8 +109,7 @@
   <div class="container about-grid">
     <div class="about-visual reveal-left">
       <div class="about-frame">
-                <img src="{{ url_for('static', filename='images/gympic.jpg') }}"
-             alt="Athlete training at {{ site.name }}" loading="lazy">
+                 <img src="/images/gympic.jpg" alt="Athlete training at {{ site.name }}" loading="lazy">
         <div class="frame-border"></div>
       </div>
       <div class="badge-float">
@@ -215,8 +214,8 @@
         Replace the poster image and <source> below with your own gym walkthrough video.
         Drop your file at: static/videos/gym-tour.mp4
       -->
-      <video id="gymVideo" poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop" muted loop playsinline preload="none">
-        <source src="{{ url_for('static', filename='videos/gym-tour.mp4') }}" type="video/mp4">
+      <video id="gymVideo" poster="/images/gympic.jpg" muted loop playsinline preload="none" controls>
+        <source src="/videos/reel.mp4" type="video/mp4">
       </video>
       <div class="video-overlay"></div>
       <button class="video-play" id="videoPlayBtn" aria-label="Play video">
