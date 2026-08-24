@@ -1,13 +1,3 @@
-"""
-IRONVEIN GYM — Flask backend
-A single-package static-style website (Python backend + HTML/CSS/JS frontend).
-
-Run:
-    pip install -r requirements.txt
-    python app.py
-Then open http://127.0.0.1:5000
-"""
-
 from flask import Flask, render_template, request, redirect, url_for, flash
 from datetime import datetime
 import json
@@ -36,7 +26,7 @@ SITE = {
     "youtube": "https://youtube.com/feralfitness",
 }
 
-WHATSAPP_DEFAULT_MESSAGE = "Hi IRONVEIN, I'd like to know more about your membership plans."
+WHATSAPP_DEFAULT_MESSAGE = f"Hi {SITE['name']}, I'd like to know more about your membership plans."
 
 # --------------------------------------------------------------------------
 # GYM PACKAGES
