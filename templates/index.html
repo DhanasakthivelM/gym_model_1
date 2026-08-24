@@ -19,9 +19,9 @@
 <body>
 
 <!-- ============ PRELOADER ============ -->
-<div class="preloader" id="preloader">
+  <div class="preloader" id="preloader">
   <div class="preloader-ring"></div>
-  <div class="preloader-text">IRON<span>VEIN</span></div>
+  <div class="preloader-text">{{ site.name }}</div>
 </div>
 
 <!-- ============ CUSTOM CURSOR ============ -->
@@ -31,7 +31,7 @@
 <!-- ============ NAV ============ -->
 <header class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="logo">IRON<span>VEIN</span></a>
+    <a href="#home" class="logo">{{ site.name }}</a>
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -110,30 +110,29 @@
   <div class="container about-grid">
     <div class="about-visual reveal-left">
       <div class="about-frame">
-        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop" alt="Athlete training at IRONVEIN" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop" alt="Athlete training at {{ site.name }}" loading="lazy">
         <div class="frame-border"></div>
       </div>
       <div class="badge-float">
-        <i class="fa-solid fa-trophy"></i>
+        <i class="fa-solid fa-star"></i>
         <div>
-          <strong>12+ Years</strong>
-          <span>Of Elite Training</span>
+          <strong>207</strong>
+          <span>Google reviews (4.7)</span>
         </div>
       </div>
     </div>
 
     <div class="about-copy reveal-right">
-      <p class="section-eyebrow">01 — About Ironvein</p>
+      <p class="section-eyebrow">01 — About {{ site.name }}</p>
       <h2 class="section-title">Not a gym. <span class="gold-text">A proving ground.</span></h2>
       <p class="section-text">
-        IRONVEIN was built for the 1% who train with intent. Every rig, every plate,
-        every square foot of this space was chosen to remove excuses — so the only
-        thing standing between you and your best body is the work itself.
+        {{ site.name }} makes fitness welcoming, fun and easy for beginners. Our
+        classes and programs are designed to build confidence while delivering
+        measurable results.
       </p>
       <p class="section-text">
-        From competition powerlifting platforms to a dedicated recovery suite, this
-        is where serious athletes and first-time lifters train side by side, under
-        coaches who've done it themselves.
+        From yoga and dance to strength and conditioning, experienced coaches
+        guide every member with professional programming and a supportive atmosphere.
       </p>
 
       <div class="about-points">
@@ -153,7 +152,7 @@
     <div class="section-head center">
       <p class="section-eyebrow">02 — What You Get</p>
       <h2 class="section-title">Built for <span class="gold-text">peak performance</span></h2>
-      <p class="section-text">Every corner of IRONVEIN is engineered around one goal — your progress.</p>
+      <p class="section-text">Every program at {{ site.name }} is designed to make fitness fun and accessible.</p>
     </div>
 
     <div class="features-grid">
@@ -353,8 +352,8 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <a href="#home" class="logo">IRON<span>VEIN</span></a>
-      <p>Black steel. Gold discipline. A private training ground for people who refuse average.</p>
+      <a href="#home" class="logo">{{ site.name }}</a>
+      <p>At Feral, fitness is fun, friendly and beginner-oriented.</p>
     </div>
     <div>
       <h4>Explore</h4>

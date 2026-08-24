@@ -20,21 +20,20 @@ app.secret_key = "ironvein-secret-key-change-in-production"
 # SITE CONFIG — edit this block to re-brand the whole site
 # --------------------------------------------------------------------------
 SITE = {
-    "name": "IRONVEIN",
-    "tagline": "FORGE YOUR LEGEND",
-    "subtitle": "A private strength temple where black steel meets gold discipline.",
-    "phone_display": "+91 98765 43210",
-    "whatsapp_number": "919876543210",   # country code + number, no + or spaces
-    "email": "hello@ironveingym.com",
-    "address": "12 Anna Salai, RS Puram, Coimbatore, Tamil Nadu 641002",
+    "name": "Feral Fitness",
+    "tagline": "Fitness made fun & easy",
+    "subtitle": "Beginner-friendly programs: Yoga, Zumba, Aerobics, CrossFit, HIIT, Dance.",
+    "phone_display": "096008 83838",
+    # country code + number, no + or spaces (remove leading zero)
+    "whatsapp_number": "919600883838",
+    "email": "hello@feralfitness.com",
+    "address": "Feral fitness, new number 44, 2nd floor above Kotak Mahindra Bank ATM, near five lights junction, West Mambalam, Chennai, Tamil Nadu 600024",
     "hours": [
-        {"days": "Monday – Friday", "time": "5:00 AM – 11:00 PM"},
-        {"days": "Saturday",        "time": "6:00 AM – 10:00 PM"},
-        {"days": "Sunday",          "time": "7:00 AM – 9:00 PM"},
+        {"days": "Daily", "time": "Open – Closes 10:00 PM"},
     ],
-    "instagram": "https://instagram.com",
-    "facebook": "https://facebook.com",
-    "youtube": "https://youtube.com",
+    "instagram": "https://instagram.com/feralfitness",
+    "facebook": "https://facebook.com/feralfitness",
+    "youtube": "https://youtube.com/feralfitness",
 }
 
 WHATSAPP_DEFAULT_MESSAGE = "Hi IRONVEIN, I'd like to know more about your membership plans."
@@ -96,26 +95,22 @@ PACKAGES = [
 # FEATURES / AMENITIES
 # --------------------------------------------------------------------------
 FEATURES = [
-    {"icon": "dumbbell", "title": "Elite Strength Floor",
-     "desc": "Premium free-weight rigs, competition platforms and a full range of resistance machines."},
-    {"icon": "heartbeat", "title": "Performance Cardio Deck",
-     "desc": "Skyline-facing treadmills, rowers and assault bikes with live heart-rate tracking."},
-    {"icon": "user-friends", "title": "Certified Coaches",
-     "desc": "One-on-one programming from coaches trained in strength, physique and rehab work."},
-    {"icon": "utensils", "title": "Nutrition Studio",
-     "desc": "Custom macro plans and an in-house protein bar to fuel every session."},
-    {"icon": "spa", "title": "Recovery & Sauna",
-     "desc": "Infrared sauna, cold plunge and guided mobility rooms to rebuild between lifts."},
-    {"icon": "shield-alt", "title": "24/7 Secure Access", "desc": "Biometric entry, HD security and round-the-clock staffed hours for peace of mind."},
+    {"icon": "spa", "title": "Yoga & Mobility", "desc": "Beginner-friendly yoga classes to improve flexibility and recovery."},
+    {"icon": "music", "title": "Zumba & Dance Fitness", "desc": "High-energy dance classes including Zumba and dance cardio."},
+    {"icon": "heart-pulse", "title": "Aerobics & Cardio", "desc": "Group aerobics and endurance sessions to boost stamina."},
+    {"icon": "dumbbell", "title": "Strength & Conditioning", "desc": "Structured strength programs, CrossFit-style WODs and functional training."},
+    {"icon": "bolt", "title": "HIIT", "desc": "Short, intense interval training sessions for fast results."},
+    {"icon": "users", "title": "Dedicated Kids Program", "desc": "Kids classes: Yoga, Gymnastics, Karate and Dance — safe, fun and age-appropriate."},
+    {"icon": "person-chalkboard", "title": "Expert Coaches", "desc": "Professional trainers guiding beginners and experienced members alike."},
 ]
 
 TESTIMONIALS = [
-    {"name": "Arjun Mehta", "role": "Member since 2023",
-     "quote": "IRONVEIN rebuilt my discipline. The coaching is elite and the space feels like nowhere else in the city."},
-    {"name": "Sneha Kapoor", "role": "Ascend member",
-     "quote": "Best decision I made this year. The recovery zone alone is worth the membership."},
-    {"name": "Rahul Varma", "role": "Sovereign member",
-     "quote": "Private coaching, real results. I've never trained anywhere this serious about performance."},
+    {"name": "Sanjana S", "role": "Member",
+     "quote": "Best gym have ever gone..good ambience ,professional trainers and best service"},
+    {"name": "Sri Sankara Narayanan", "role": "Member",
+     "quote": "Very very hygienic flooor and good atmosphere to work out."},
+    {"name": "Kirubhahar Praveen", "role": "Member",
+     "quote": "Would love to be a regular here, great warmth and vibes in the place."},
 ]
 
 STATS = [
