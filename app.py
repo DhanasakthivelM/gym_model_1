@@ -123,8 +123,19 @@ def save_message(entry: dict) -> None:
         except (json.JSONDecodeError, FileNotFoundError):
             data = []
     data.append(entry)
-    with open(MESSAGES_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    try:
+        with open(MESSAGES_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        # In serverless / read-only deployments (Vercel, etc.) writing to disk fails.
+        # Log the message to stdout/stderr so it appears in provider logs and
+        # continue without raising to avoid crashing the contact endpoint.
+        print(f"WARNING: could not save message to {MESSAGES_FILE}: {e}")
+        try:
+            # Attempt to log a compact JSON line for easier server-log parsing
+            print(json.dumps(entry, ensure_ascii=False))
+        except Exception:
+            pass
 
 
 @app.route("/")
